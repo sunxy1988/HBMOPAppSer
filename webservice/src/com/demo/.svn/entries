@@ -1,0 +1,64 @@
+8
+
+dir
+12
+https://218.205.192.30/svn/HBMOP_App/webservice/src/com/demo
+https://218.205.192.30/svn/HBMOP_App
+
+
+
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+
+svn:special svn:externals svn:needs-lock
+
+T.java
+file
+
+
+
+
+2015-02-04T09:45:31.326955Z
+3a76949c4384d805ea831401f7accedd
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+GreetingService.java
+file
+
+
+
+
+2015-03-03T02:54:06.414398Z
+37283925bf8e938499194c6c6b674da9
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+TestGreetingService.java
+file
+
+
+
+
+2015-02-16T06:23:08.722417Z
+a98d602355421c5f30e3dca6cd20f90b
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+GreetingServiceimpl.java
+file
+
+
+
+
+2015-02-04T01:18:39.284486Z
+d019f497de6c43b68fe1538646d42a33
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+

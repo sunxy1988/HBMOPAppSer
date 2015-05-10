@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="
+ http://www.springframework.org/schema/beans 
+ http://www.springframework.org/schema/beans/spring-beans.xsd 
+ http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+ 
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:jdbc.properties</value>
+		</property>
+	</bean>
+	
+	    <bean id="dataSource" destroy-method="close" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="minPoolSize" > <value >5 </value > </property > 
+        <property name="maxPoolSize" > <value >100 </value > </property > 
+         <property name="initialPoolSize"><value>10</value></property>
+        <property name="maxIdleTime" > <value >60 </value > </property > 
+        <property name="acquireIncrement" > <value >5</value > </property > 
+        <property name="acquireRetryAttempts" > <value >30 </value > </property > 
+        <property name="acquireRetryDelay" > <value >1000 </value > </property > 
+        <property name="maxStatements" > <value >0 </value > </property > 
+         <property name="breakAfterAcquireFailure"><value>true</value></property>
+        <property name="idleConnectionTestPeriod" > <value >60 </value > </property > 
+        <property name="testConnectionOnCheckout" > <value >true </value > </property >
+        <property name="testConnectionOnCheckin" > <value >true </value > </property > 
+        <property name="autoCommitOnClose" > <value >false </value > </property > 
+        <property name="checkoutTimeout" > <value >6000 </value > </property >     
+        <property   name="connectionTesterClassName" > <value >com.mchange.v2.c3p0.impl.DefaultConnectionTester</value > </property >   
+	</bean>
+	<!-- 整合hibernate的配置 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<list>
+				<value>com.hbmop.app.model</value>			
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					<!--  org.hibernate.dialect.MySQLDialect -->
+					org.hibernate.dialect.MySQL5InnoDBDialect
+				</prop>
+				<!-- 是否显示HQL执行语句 -->
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.connection.autoReconnect">true</prop>
+				<prop key="hibernate.connection.autoReconnectForPools">true</prop>
+				<prop key="current_session_context_class">thread</prop>
+			</props>
+		</property>
+				<!-- O/R MappingResources -->
+				
+	</bean>
+		
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory">
+		</property>
+	</bean>
+
+	<!-- 声明式事务管理 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<jaxws:endpoint id="greetingService"
+		implementor="com.demo.GreetingServiceimpl" 
+		address="/GreetingService" />
+	
+	<!--配置bean,配置后该类由spring管理-->
+	<!-- 楼宇接口对应注入 -->
+	<bean id="buildingWebService" class="com.hbmop.app.webserviceImpl.BuildingWebSerImpl">
+		<property name="buildingService" ref="buildingService"></property>
+	</bean> 
+	<bean id="buildingService" class="com.hbmop.app.serviceImpl.BuildingServicImpl">
+		<property name="bDAO" ref="buildingDAO"></property>
+	</bean>
+	
+	<bean id="buildingDAO" class="com.hbmop.app.dao.BuildingDAO"></bean>
+	
+	<jaxws:endpoint id="buildingService1" 
+		implementor="#buildingWebService" 
+		address="/BuildingService" /> 
+	<!-- 子物业点接口对应注入 -->
+	<bean id="childPropertyWebService" class="com.hbmop.app.webserviceImpl.ChildPropertyWebSerImpl">
+		<property name="childPropertyService" ref="childPropertyService"></property>
+	</bean> 
+	<bean id="childPropertyService" class="com.hbmop.app.serviceImpl.ChildPropertyServiceImpl">
+		<property name="childPropertyDAO" ref="childPropertyDAO"></property>
+	</bean>
+	
+	<bean id="childPropertyDAO" class="com.hbmop.app.dao.ChildPropertyDAO"></bean>
+	
+	<jaxws:endpoint id="childPropertyService1" 
+		implementor="#childPropertyWebService"
+		address="/ChildPropertyService" /> 
+	<!-- 物业点接口对应注入 -->
+	<bean id="propertyWebService" class="com.hbmop.app.webserviceImpl.PropertyWebSerImpl">
+		<property name="propertyService" ref="propertyService"></property>
+	</bean> 
+	<bean id="propertyService" class="com.hbmop.app.serviceImpl.PropertyServicImpl">
+		<property name="pDAO" ref="propertyDAO"></property>
+		<property name="userDAO" ref="userDAO"></property>
+	</bean>
+	
+	<bean id="propertyDAO" class="com.hbmop.app.dao.PropertyDAO"></bean>
+	
+	<jaxws:endpoint id="propertyService1" 
+		implementor="#propertyWebService" 
+		address="/PropertyService" /> 
+	<!-- 室分站点接口对应注入 -->
+	<bean id="indoorSiteWebService" class="com.hbmop.app.webserviceImpl.IndoorSiteWebSerImpl">
+		<property name="indoorSiteService" ref="indoorSiteService"></property>
+	</bean> 
+	<bean id="indoorSiteService" class="com.hbmop.app.serviceImpl.IndoorSiteServiceImpl">
+		<property name="indoorSiteDAO" ref="indoorSiteDAO"></property>
+	</bean>
+	
+	<bean id="indoorSiteDAO" class="com.hbmop.app.dao.IndoorSiteDAO"></bean>
+	
+	<jaxws:endpoint id="indoorSiteService1" 
+		implementor="#indoorSiteWebService" 
+		address="/IndoorSiteService" /> 
+	<!-- 登陆接口对应注入 -->
+	<bean id="loginWebService" class="com.hbmop.app.webserviceImpl.LoginWebSerImpl">
+		<property name="userService" ref="userService"></property>
+	</bean> 
+	<bean id="userService" class="com.hbmop.app.serviceImpl.UserServicImpl">
+		<property name="userDAO" ref="userDAO"></property>
+	</bean>
+	
+	<bean id="userDAO" class="com.hbmop.app.dao.UserDAO"></bean>
+	
+	<jaxws:endpoint id="loginService1" 
+		implementor="#loginWebService" 
+		address="/LoginService" /> 
+</beans>

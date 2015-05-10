@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 41
+/svn/HBMOP_App/!svn/ver/12/webservice/src
+END
+applicationContext.xml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/HBMOP_App/!svn/ver/4/webservice/src/applicationContext.xml
+END
+jdbc.properties
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/HBMOP_App/!svn/ver/4/webservice/src/jdbc.properties
+END

@@ -1,0 +1,64 @@
+8
+
+dir
+12
+https://218.205.192.30/svn/HBMOP_App/webservice/src/com/hbmop/app/monitor
+https://218.205.192.30/svn/HBMOP_App
+
+
+
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+
+svn:special svn:externals svn:needs-lock
+
+Task_to_do_list.java
+file
+
+
+
+
+2015-02-03T14:14:45.846724Z
+67e645f91bd5cfa743ddfe8cf2b80d87
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+CellInformation.java
+file
+
+
+
+
+2015-02-03T14:13:36.351749Z
+2bcfebd3d363730245eeb1936d55eaa1
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+PhotoProperties.java
+file
+
+
+
+
+2015-02-03T14:14:30.350838Z
+4f22472e065fa999f4b6f8d065fcfb0e
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+HavaToDoTheTask.java
+file
+
+
+
+
+2015-02-03T14:14:08.440584Z
+f9b160b8b9b5e5c5086dac6af36227f6
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+

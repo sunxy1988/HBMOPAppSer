@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/HBMOP_App/!svn/ver/12/webservice/src/com/hbmop/app/webserviceImpl
+END
+ChildPropertyWebSerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/HBMOP_App/!svn/ver/13/webservice/src/com/hbmop/app/webserviceImpl/ChildPropertyWebSerImpl.java
+END
+LoginWebSerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/HBMOP_App/!svn/ver/12/webservice/src/com/hbmop/app/webserviceImpl/LoginWebSerImpl.java
+END
+BuildingWebSerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/HBMOP_App/!svn/ver/9/webservice/src/com/hbmop/app/webserviceImpl/BuildingWebSerImpl.java
+END
+IndoorSiteWebSerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/HBMOP_App/!svn/ver/13/webservice/src/com/hbmop/app/webserviceImpl/IndoorSiteWebSerImpl.java
+END
+PropertyWebSerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/HBMOP_App/!svn/ver/13/webservice/src/com/hbmop/app/webserviceImpl/PropertyWebSerImpl.java
+END

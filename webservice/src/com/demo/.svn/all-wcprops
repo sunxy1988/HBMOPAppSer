@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/demo
+END
+T.java
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/demo/T.java
+END
+GreetingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/demo/GreetingService.java
+END
+TestGreetingService.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/demo/TestGreetingService.java
+END
+GreetingServiceimpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/demo/GreetingServiceimpl.java
+END

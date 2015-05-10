@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/HBMOP_App/!svn/ver/5/webservice/WebContent/WEB-INF/PropertyWebServiceService/com/hbmop/app/webservice
+END
+undeploy.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/HBMOP_App/!svn/ver/5/webservice/WebContent/WEB-INF/PropertyWebServiceService/com/hbmop/app/webservice/undeploy.wsdd
+END
+deploy.wsdd
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/HBMOP_App/!svn/ver/5/webservice/WebContent/WEB-INF/PropertyWebServiceService/com/hbmop/app/webservice/deploy.wsdd
+END

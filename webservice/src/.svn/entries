@@ -1,0 +1,55 @@
+8
+
+dir
+12
+https://218.205.192.30/svn/HBMOP_App/webservice/src
+https://218.205.192.30/svn/HBMOP_App
+
+
+
+2015-03-05T03:36:16.042200Z
+12
+sunxingyang
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+7ecd72b6-20fe-d446-8db5-ed567764e58d
+
+applicationContext.xml
+file
+
+
+
+
+2015-02-13T07:51:47.590438Z
+07fbb7c1f7591927d5a7a26bd80e8874
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+jdbc.properties
+file
+
+
+
+
+2015-02-03T14:39:53.641965Z
+c741dcb4ab82af1d07e71eec965ee33b
+2015-02-16T09:29:59.126172Z
+4
+sunxingyang
+
+com
+dir
+

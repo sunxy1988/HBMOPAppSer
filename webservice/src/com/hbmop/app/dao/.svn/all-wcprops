@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/HBMOP_App/!svn/ver/12/webservice/src/com/hbmop/app/dao
+END
+DAOSupport.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/hbmop/app/dao/DAOSupport.java
+END
+BuildingDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/HBMOP_App/!svn/ver/32/webservice/src/com/hbmop/app/dao/BuildingDAO.java
+END
+UserDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/hbmop/app/dao/UserDAO.java
+END
+DAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/hbmop/app/dao/DAO.java
+END
+IndoorSiteDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/HBMOP_App/!svn/ver/32/webservice/src/com/hbmop/app/dao/IndoorSiteDAO.java
+END
+CitiesDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/HBMOP_App/!svn/ver/4/webservice/src/com/hbmop/app/dao/CitiesDAO.java
+END
+PropertyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/HBMOP_App/!svn/ver/32/webservice/src/com/hbmop/app/dao/PropertyDAO.java
+END
+ChildPropertyDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/HBMOP_App/!svn/ver/32/webservice/src/com/hbmop/app/dao/ChildPropertyDAO.java
+END

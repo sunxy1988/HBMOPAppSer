@@ -1,64 +1,0 @@
-8
-
-dir
-12
-https://218.205.192.30/svn/HBMOP_App/webservice
-https://218.205.192.30/svn/HBMOP_App
-
-
-
-2015-03-05T03:36:16.042200Z
-12
-sunxingyang
-
-
-svn:special svn:externals svn:needs-lock
-
-
-
-
-
-
-
-
-
-
-
-7ecd72b6-20fe-d446-8db5-ed567764e58d
-
-build
-dir
-
-.classpath
-file
-
-
-
-
-2015-02-02T06:52:36.527000Z
-da21679fabe6236ceedfd54958ba7b27
-2015-02-16T09:29:59.126172Z
-4
-sunxingyang
-
-.project
-file
-
-
-
-
-2015-02-02T06:52:36.531000Z
-40f8369d2612487f72b738b4ade5197a
-2015-02-16T09:29:59.126172Z
-4
-sunxingyang
-
-src
-dir
-
-WebContent
-dir
-
-.settings
-dir
-
